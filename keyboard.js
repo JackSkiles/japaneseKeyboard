@@ -4,13 +4,28 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 let boardChange = true;
 let hiragana = "";
-let newCharacters = [];
+let newCharacters = "";
+function string(updated){
+    for (let i = 0; i <= updated.length; i++){
+
+    }
+}
 document.getElementById("input").addEventListener('keydown', event => {
-    const charList = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    //const charList = 'abcdefghijklmnopqrstuvwxyz0123456789';
     const key = event.key.toLowerCase();
-
+    hiragana += key;
     // we are only interested in alphanumeric keys
-    if (charList.indexOf(key) === -1) return;
-
-    console.log(key);
+    console.log(hiragana);
+    if (hiragana == "backspace"){
+        newCharacters.pop();
+    }
+    else if(hiragana == "a"){
+        newCharacters += "あ"
+    } else if (hiragana == "i"){
+        newCharacters += "い"
+    }
+    console.log(hiragana);
+    console.log(newCharacters)
+    document.getElementById("input").value=newCharacters;
+    hiragana = "";
 });
