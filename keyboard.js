@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 let boardChange = true;
 let hiragana = "";
+let newCharacters = [];
 document.getElementById("input").addEventListener('keydown', event => {
     const charList = 'abcdefghijklmnopqrstuvwxyz0123456789';
     const key = event.key.toLowerCase();
