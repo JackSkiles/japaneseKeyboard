@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 let boardChange = true;
 let hiragana = "";
 let newCharacters = "";
+let lastKey = "";
 function string(updated){
     for (let i = 0; i <= updated.length; i++){
 
@@ -13,6 +14,7 @@ function string(updated){
 document.getElementById("input").addEventListener('keydown', event => {
     //const charList = 'abcdefghijklmnopqrstuvwxyz0123456789';
     const key = event.key.toLowerCase();
+    console.log(key);
     hiragana += key;
     // we are only interested in alphanumeric keys
     if (hiragana == "backspace"){
@@ -30,8 +32,10 @@ document.getElementById("input").addEventListener('keydown', event => {
     console.log(hiragana);
     console.log(document.getElementById("input").value);
     document.getElementById("input").value="";
-    // document.getElementById("input").value=newCharacters;
-    if(hiragana.length > 3){
+    document.getElementById("output").value=newCharacters;
+    if(hiragana.length > 3 || lastKey == hiragana.substring(0, hiragana.length - 1)){
         hiragana = "";
     }
+    lastKey = hiragana.charAt(hiragana.length - 1);
+    console.log(lastKey);
 });
