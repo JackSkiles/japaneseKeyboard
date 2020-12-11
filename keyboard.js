@@ -15,17 +15,23 @@ document.getElementById("input").addEventListener('keydown', event => {
     const key = event.key.toLowerCase();
     hiragana += key;
     // we are only interested in alphanumeric keys
-    console.log(hiragana);
     if (hiragana == "backspace"){
-        newCharacters.pop();
+        console.log('hello');
+        console.log(newCharacters);
+        newCharacters =  newCharacters.substring(0, newCharacters.length - 1);
     }
     else if(hiragana == "a"){
         newCharacters += "あ"
     } else if (hiragana == "i"){
         newCharacters += "い"
+    } else if (hiragana == "ke"){
+        newCharacters += "け"
     }
     console.log(hiragana);
-    console.log(newCharacters)
-    document.getElementById("input").value=newCharacters;
-    hiragana = "";
+    console.log(document.getElementById("input").value);
+    document.getElementById("input").value="";
+    // document.getElementById("input").value=newCharacters;
+    if(hiragana.length > 3){
+        hiragana = "";
+    }
 });
