@@ -6,6 +6,7 @@ let boardChange = true;
 let hiragana = "";
 let newCharacters = "";
 let lastKey = "";
+let inputField = "";
 function string(updated){
     for (let i = 0; i <= updated.length; i++){
 
@@ -14,28 +15,33 @@ function string(updated){
 document.getElementById("input").addEventListener('keydown', event => {
     //const charList = 'abcdefghijklmnopqrstuvwxyz0123456789';
     const key = event.key.toLowerCase();
-    console.log(key);
+    // console.log(key);
     hiragana += key;
     // we are only interested in alphanumeric keys
     if (hiragana == "backspace"){
-        console.log('hello');
-        console.log(newCharacters);
         newCharacters =  newCharacters.substring(0, newCharacters.length - 1);
+       // inputField =  inputField.substring(0, inputField.length - 1);
     }
-    else if(hiragana == "a"){
+    else if(hiragana.charAt(hiragana.length - 1) == "a"){
         newCharacters += "あ"
-    } else if (hiragana == "i"){
+        // inputField += "a";
+    } else if (hiragana.charAt(hiragana.length - 1) == "i"){
         newCharacters += "い"
-    } else if (hiragana == "ke"){
+    } else if (hiragana.charAt(hiragana.length - 1) == "e" && hiragana.charAt(hiragana.length - 2) == "k"){
         newCharacters += "け"
     }
-    console.log(hiragana);
-    console.log(document.getElementById("input").value);
-    document.getElementById("input").value="";
+    // console.log(hiragana);
+    document.getElementById("input").value=inputField;
     document.getElementById("output").value=newCharacters;
-    if(hiragana.length > 3 || lastKey == hiragana.substring(0, hiragana.length - 1)){
+    if(hiragana.length > 3 || lastKey == hiragana.charAt(hiragana.length - 1)){
+        // console.log(hiragana.charAt(hiragana.length - 1));
+        // console.log(lastKey);
+        // console.log(hiragana);
         hiragana = "";
     }
     lastKey = hiragana.charAt(hiragana.length - 1);
-    console.log(lastKey);
+    console.log(hiragana.charAt(hiragana.length - 1));
+        console.log(lastKey);
+        console.log(hiragana);
+    // console.log(lastKey);
 });
