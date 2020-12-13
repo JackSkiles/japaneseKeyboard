@@ -14,6 +14,14 @@ function string(updated){
 }
 document.getElementById("input").addEventListener('keydown', event => {
     //const charList = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    // console.log(typeof(document.getElementById("output").value));
+    // console.log(document.getElementById("output").value);
+    // console.log(newCharacters);
+    if(document.getElementById("output").value == ""){
+        console.log("hello")
+        newCharacters = "";
+        console.log(newCharacters);
+    }
     const key = event.key.toLowerCase();
     // console.log(key);
     hiragana += key;
@@ -56,8 +64,8 @@ document.getElementById("input").addEventListener('keydown', event => {
         hiragana = "";
     }
     lastKey = hiragana.charAt(hiragana.length - 1);
-    console.log(hiragana.charAt(hiragana.length - 1));
-        console.log(lastKey);
-        console.log(hiragana);
+    // console.log(hiragana.charAt(hiragana.length - 1));
+    //     console.log(lastKey);
+    //     console.log(hiragana);
     // console.log(lastKey);
 });

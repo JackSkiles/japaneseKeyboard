@@ -12,21 +12,25 @@
     background-color: white;
     width: 100%;
 }
-.keyboardContainer1 {
-    display: flex;
-    align-items: center;
-    padding-top: 5vh;
-    height: 10%;
-    width: 50%;
-}
+
 .keyboardContainer2 {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    padding-top: 20vh;
     height: 80%;
     width: 50%;
 }
-.keyboard {
-    height: 70%;
+.keyboard1 {
+    height: 10%;
+    margin-bottom: 5vh;
+    width: 100%;
+    font-size: 3vh;
+}
+.keyboard2 {
+    display: flex;
+    height: 30%;
+    margin-bottom: 5vh;
     width: 100%;
     font-size: 3vh;
 }
