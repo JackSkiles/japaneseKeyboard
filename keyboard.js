@@ -13,7 +13,7 @@ let katakanaAlphabet = ['ア', 'イ', 'ウ', 'エ', 'オ', 'カ', 'キ', 'ク', 
     'ハ', 'ヒ', 'フ', 'ヘ', 'ホ', 'マ', 'ミ', 'ム', 'メ', 'モ', 'ヤ', 'ユ', 'ヨ',
     'ラ', 'リ', 'ル', 'レ', 'ロ', 'ワ', 'ヲ', 'ン'];
 let alphabet = hiraganaAlphabet
-let katakana = false;
+let katakana = true;
 let newCharacters = "";
 let lastKey = "";
 let inputField = "";
@@ -52,6 +52,9 @@ document.getElementById("input").addEventListener('keydown', event => {
     //         newCharacters += "け"
     //         break;
     //   }
+    if (katakana == true){
+        alphabet = katakanaAlphabet;
+    }
     if (characterInput == "backspace") {
         newCharacters = newCharacters.substring(0, newCharacters.length - 1);
         characterInput = "";
@@ -77,25 +80,174 @@ document.getElementById("input").addEventListener('keydown', event => {
     else if (characterInput == "o") {
         newCharacters += alphabet[4];
         characterInput = "";
+    } 
+    else if (characterInput == "n") {
+        newCharacters += alphabet[45];
+        characterInput = "";
+    } 
+    else if (characterInput.length == 1){
+        console.log('hello');
     }
     else if (characterInput == "ka") {
         newCharacters += alphabet[5];
         characterInput = "";
     }
-    else if (check2 == "k" && check1 == "i") {
+    else if (characterInput == "ki") {
         newCharacters += alphabet[6];
         characterInput = "";
     }
-    else if (check2 == "k" && check1 == "u") {
+    else if (characterInput == "ku") {
         newCharacters += alphabet[7];
         characterInput = "";
     }
-    else if (check2 == "k" && check1 == "e") {
+    else if (characterInput == "ke") {
         newCharacters += alphabet[8];
         characterInput = "";
     }
-    else if (check2 == "k" && check1 == "o") {
+    else if (characterInput == "ko") {
         newCharacters += alphabet[9];
+        characterInput = "";
+    }
+    else if (characterInput == "sa") {
+        newCharacters += alphabet[10];
+        characterInput = "";
+    }
+    else if (characterInput == "shi") {
+        newCharacters += alphabet[11];
+        characterInput = "";
+    }
+    else if (characterInput == "su") {
+        newCharacters += alphabet[12];
+        characterInput = "";
+    }
+    else if (characterInput == "se") {
+        newCharacters += alphabet[13];
+        characterInput = "";
+    }
+    else if (characterInput == "so") {
+        newCharacters += alphabet[14];
+        characterInput = "";
+    } 
+    else if (characterInput == "ta") {
+        newCharacters += alphabet[15];
+        characterInput = "";
+    } 
+    else if (characterInput == "chi") {
+        newCharacters += alphabet[16];
+        characterInput = "";
+    } 
+    else if (characterInput == "tsu") {
+        newCharacters += alphabet[17];
+        characterInput = "";
+    } 
+    else if (characterInput == "te") {
+        newCharacters += alphabet[18];
+        characterInput = "";
+    } 
+    else if (characterInput == "to") {
+        newCharacters += alphabet[19];
+        characterInput = "";
+    } 
+    else if (characterInput == "na") {
+        newCharacters += alphabet[20];
+        characterInput = "";
+    } 
+    else if (characterInput == "ni") {
+        newCharacters += alphabet[21];
+        characterInput = "";
+    } 
+    else if (characterInput == "nu") {
+        newCharacters += alphabet[22];
+        characterInput = "";
+    } 
+    else if (characterInput == "ne") {
+        newCharacters += alphabet[23];
+        characterInput = "";
+    } 
+    else if (characterInput == "no") {
+        newCharacters += alphabet[24];
+        characterInput = "";
+    } 
+    else if (characterInput == "ha") {
+        newCharacters += alphabet[25];
+        characterInput = "";
+    } 
+    else if (characterInput == "hi") {
+        newCharacters += alphabet[26];
+        characterInput = "";
+    } 
+    else if (characterInput == "fu") {
+        newCharacters += alphabet[27];
+        characterInput = "";
+    } 
+    else if (characterInput == "he") {
+        newCharacters += alphabet[28];
+        characterInput = "";
+    } 
+    else if (characterInput == "ho") {
+        newCharacters += alphabet[29];
+        characterInput = "";
+    } 
+    else if (characterInput == "ma") {
+        newCharacters += alphabet[30];
+        characterInput = "";
+    } 
+    else if (characterInput == "mi") {
+        newCharacters += alphabet[31];
+        characterInput = "";
+    } 
+    else if (characterInput == "mu") {
+        newCharacters += alphabet[32];
+        characterInput = "";
+    } 
+    else if (characterInput == "me") {
+        newCharacters += alphabet[33];
+        characterInput = "";
+    } 
+    else if (characterInput == "mo") {
+        newCharacters += alphabet[34];
+        characterInput = "";
+    } 
+    else if (characterInput == "ya") {
+        newCharacters += alphabet[35];
+        characterInput = "";
+    } 
+    else if (characterInput == "yu") {
+        newCharacters += alphabet[36];
+        characterInput = "";
+    } 
+    else if (characterInput == "yo") {
+        newCharacters += alphabet[37];
+        characterInput = "";
+    } 
+    else if (characterInput == "ra") {
+        newCharacters += alphabet[38];
+        characterInput = "";
+    } 
+    else if (characterInput == "ri") {
+        newCharacters += alphabet[39];
+        characterInput = "";
+    } 
+    else if (characterInput == "ru") {
+        newCharacters += alphabet[40];
+        characterInput = "";
+    } 
+    else if (characterInput == "re") {
+        newCharacters += alphabet[41];
+        characterInput = "";
+    } 
+    else if (characterInput == "ro") {
+        newCharacters += alphabet[42];
+        characterInput = "";
+    } 
+    else if (characterInput == "wa") {
+        newCharacters += alphabet[43];
+        characterInput = "";
+    } 
+    else if(characterInput.length == 2){
+        console.log("what");
+    } else {
+        console.log("invalid input");
         characterInput = "";
     }
 
