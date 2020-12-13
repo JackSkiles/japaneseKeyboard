@@ -18,6 +18,20 @@ document.getElementById("input").addEventListener('keydown', event => {
     // console.log(key);
     hiragana += key;
     // we are only interested in alphanumeric keys
+    // switch(hiragana) {
+    //     case hiragana == "backspace":
+    //         newCharacters =  newCharacters.substring(0, newCharacters.length - 1);
+    //         break;
+    //     case hiragana.charAt(hiragana.length - 1) == "a":
+    //         newCharacters += "あ"
+    //       break;
+    //     case hiragana.charAt(hiragana.length - 1) == "i":
+    //         newCharacters += "い";
+    //       break;
+    //     case hiragana.charAt(hiragana.length - 1) == "e" && hiragana.charAt(hiragana.length - 2):
+    //         newCharacters += "け"
+    //         break;
+    //   }
     if (hiragana == "backspace"){
         newCharacters =  newCharacters.substring(0, newCharacters.length - 1);
        // inputField =  inputField.substring(0, inputField.length - 1);
