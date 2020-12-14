@@ -1,6 +1,14 @@
 .main {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b1b1b;
+    height: 50vh;
+}
+.main2 {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #1b1b1b;
@@ -12,17 +20,25 @@
     background-color: white;
     width: 100%;
 }
-
+#imgCont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+#img{
+    padding-top: 5vh;
+    height: 100%;
+}
 .keyboardContainer2 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 20vh;
-    height: 80%;
+    height: 60%;
     width: 50%;
 }
 .keyboard1 {
-    height: 10%;
+    height: 5%;
     margin-bottom: 5vh;
     width: 100%;
     font-size: 3vh;
@@ -33,4 +49,10 @@
     margin-bottom: 5vh;
     width: 100%;
     font-size: 3vh;
+}
+#toggle {
+    height: 10%;
+    width: 10vw;
+    font-size: 100%;
+    font-family: sans-serif;
 }

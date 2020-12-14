@@ -30,9 +30,11 @@ document.getElementById("toggle").addEventListener('click', event =>{
     if(katakana == false){
         katakana = true;
         document.getElementById("toggle").innerHTML = "Hiragana";
+        document.getElementById("img").src = "katakanaChart.jpg"
     } else if(katakana == true){
         katakana = false;
         document.getElementById("toggle").innerHTML = "Katakana";
+        document.getElementById("img").src = "hiraganaChart.jpg"
     }
 });
 
